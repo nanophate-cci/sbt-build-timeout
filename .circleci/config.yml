@@ -3,6 +3,7 @@ jobs:
   build:
     machine:
       image: ubuntu-2004:2022.07.1
+    paralleism: 30
     steps:
       - checkout
       - run: |
