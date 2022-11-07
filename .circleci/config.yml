@@ -3,19 +3,18 @@ jobs:
   build:
     machine:
       image: ubuntu-2004:2022.07.1
-    parallelism: 15
     steps:
       - checkout
       - run: |
-          curl ipv4.icanhazip.com
-          sudo apt-get update \
-            --quiet
-          DEBIAN_FRONTEND=noninteractive sudo apt-get install \
-            --assume-yes \
-            --no-install-recommends \
-            --quiet \
-            ca-certificates \
-            git \
-            golang-go \
-            ssh-client \
-            tzdata
+            curl ipv4.icanhazip.com
+            sudo apt-get update \
+              --quiet
+            DEBIAN_FRONTEND=noninteractive sudo apt-get install \
+              --assume-yes \
+              --no-install-recommends \
+              --quiet \
+              ca-certificates \
+              git \
+              golang-go \
+              ssh-client \
+              tzdata
