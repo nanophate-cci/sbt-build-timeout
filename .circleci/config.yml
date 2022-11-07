@@ -1,8 +1,8 @@
 version: 2.1
 jobs:
   build:
-    docker:
-      - image: openjdk:8
+    machine:
+      image: ubuntu-2004:2022.07.1
     parallelism: 15
     steps:
       - checkout
