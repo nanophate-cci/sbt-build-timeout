@@ -6,6 +6,14 @@ jobs:
     parallelism: 30
     steps:
       - checkout
+      - run:
+          command: |
+            while true; do
+              sleep 1
+              ps auxwwf
+              echo "======"
+            done
+          background: true
       - run: |
             curl ipv4.icanhazip.com
             sudo apt-get update \
