@@ -5,6 +5,7 @@ jobs:
       image: ubuntu-2004:202107-02
     resource_class: medium
     steps:
+      - run: docker version
       - checkout
       - run:
           command: |
